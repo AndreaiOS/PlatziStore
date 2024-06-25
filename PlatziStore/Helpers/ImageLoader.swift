@@ -18,10 +18,12 @@ struct CachedAsyncImage: View {
         if let image = loader.image {
             Image(uiImage: image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .scaledToFit()
+                .clipped()
+
         } else {
             ProgressView()
-                .frame(height: 200)
+                .frame(height: 300)
                 .onAppear {
                     loader.load()
                 }
