@@ -6,10 +6,9 @@ PlatziStore is an iOS application built with Swift and SwiftUI. The app is desig
 
 ## Features
 
-- Retrieve and display product information and associated images from a chosen API.
-- Search functionality to find products by name.
+- Retrieve and display product information and associated images from fakeapi.platzi.com.
 - Detail view for each product with more information.
-- Filters for product categories and sorting by price.
+- Filters for product categories, price and name.
 - Image caching for optimized performance.
 - Support for both Light and Dark Mode.
 

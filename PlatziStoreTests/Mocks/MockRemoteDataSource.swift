@@ -13,7 +13,6 @@ final class MockRemoteDataSource: RemoteDataSource {
         let offset = queryItems?.first(where: { $0.name == "offset" })?.value ?? "0"
         let limit = queryItems?.first(where: { $0.name == "limit" })?.value ?? "10"
         let categoryId = queryItems?.first(where: { $0.name == "categoryId" })?.value
-        let sort = queryItems?.first(where: { $0.name == "sort" })?.value
 
         let offsetInt = Int(offset) ?? 0
         let limitInt = Int(limit) ?? 10
@@ -21,17 +20,6 @@ final class MockRemoteDataSource: RemoteDataSource {
         var filteredProducts = MockData.products
         if let categoryId = categoryId, let categoryInt = Int(categoryId) {
             filteredProducts = filteredProducts.filter { $0.category.id == categoryInt }
-        }
-
-        if let sort = sort {
-            switch sort {
-            case "price":
-                filteredProducts.sort(by: { $0.price < $1.price })
-            case "-price":
-                filteredProducts.sort(by: { $0.price > $1.price })
-            default:
-                break
-            }
         }
 
         guard offsetInt < filteredProducts.count else {
