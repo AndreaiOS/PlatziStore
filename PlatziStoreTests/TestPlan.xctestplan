@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "0DE8A933-2027-4974-BD26-1CF927341F08",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:PlatziStore.xcodeproj",
+        "identifier" : "A5130AF62C25D51B008C6D4D",
+        "name" : "PlatziStoreTests"
+      }
+    }
+  ],
+  "version" : 1
+}
