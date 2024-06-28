@@ -46,6 +46,7 @@ struct ContentView: View {
         .sheet(isPresented: $showFilters, onDismiss: fetchProducts, content: {
             FiltersView(showFilters: $showFilters, viewModel: viewModel, categoriesLoaded: $categoriesLoaded)
         })
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func loadProducts() {
